@@ -1,5 +1,5 @@
 body {
-	background-image: url(http://www.desktopcrunch.com/wp-content/uploads/wallpapers/HD/Is-For-Grass-Fresh-New-Hd-Wallpaper.jpg)
+	background-image: url(http://wallpaperhd.go-gl.com/images/31927-download-dew-on-grass-blades-hd-wallpaper.jpg)
 }
 h1 {
 	color: blue;
@@ -12,4 +12,7 @@ li#Mediumpriority {
 }
 li#Lowpriority {
 	color: yellow;
+}
+p {
+	color: green;
 }
