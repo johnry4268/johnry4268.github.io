@@ -1,0 +1,15 @@
+body {
+	background-image: url(http://www.desktopcrunch.com/wp-content/uploads/wallpapers/HD/Is-For-Grass-Fresh-New-Hd-Wallpaper.jpg)
+}
+h1 {
+	color: blue;
+}
+li#Highpriority {
+	color: red;
+}
+li#Mediumpriority {
+	color: orange;
+}
+li#Lowpriority {
+	color: yellow;
+}
