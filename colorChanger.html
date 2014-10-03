@@ -1,0 +1,25 @@
+<html>
+   <body>
+      <label for="redi">Red</label>
+          <input id="redi" type="range" value="255">
+       <br>
+      <label for="greeni">Green</label>
+          <input id="greeni" type="range" value="244">
+       <br>
+      <label for="bluei">Blue</label>
+          <input id="bluei" type="range" value="233">
+       <br>
+       <br>
+      <button id="doit" onclick="changeColor();">Change Color</button>
+      <script type="text/javascript">
+         changeColor = function() {
+             var red, green, blue;
+             red = document.querySelector("#redi");
+             green = document.querySelector("#greeni");
+             blue = document.querySelector("#bluei");
+             newColor = "rgb(" + red.value + "," + green.value + "," + blue.value + ")"
+             document.body.style.backgroundColor = newColor;
+         }
+      </script>
+   </body>
+</html>
