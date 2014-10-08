@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="todo4.css" type="text/css">
+<html>
+	<body>
+	<div id="body">
+		<h2>To Do List</h2>
+	<main>
+		<ul id="tasklist"></ul>
+	</main>
+
+	<aside>
+		<label for="taskbox">Enter Task</label>
+		<input type="text" id="taskbox" size=40 value="Enter task here">
+		
+		<select id="priority">
+			<option>High</option>
+			<option>Medium</option>
+			<option>Low</option>
+		</select>
+		<button onclick="addTask()">New</button>
+	</aside>
+	<script type="text/javascript">
+	var taskCount = 10;
+	
+	doneTask = function() {
+		this.parentNode.className = "done"
+		}
+	addTask = function() {
+		var newli;
+		task = document.querySelector("#taskbox");
+		taskList = document.querySelector("#tasklist");
+		priorityValue = document.querySelector("#priority").value;
+		newli = document.createElement('li');
+		newcb = document.createElement('input');
+		newcb.type = 'checkbox'
+		newli.appendChild(newcb);
+		t = document.createTextNode(task.value);
+		newli.appendChild(t);
+		newcb.id = taskCount;
+		taskList.appendChild(newli);
+		task.value = "";
+		newcb.onclick = doneTask;
+		}
+	</script>
+	</div>
+</body>
+</html>
