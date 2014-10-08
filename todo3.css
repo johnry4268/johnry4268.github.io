@@ -1,9 +1,7 @@
 body {
 	text-align: center;
-}
-aside {
-	 width: 400px;
-     background-color: orange;
-     padding: 25px;
-     border: 10px solid blue;
+	width: 600px;
+    background-color: orange;
+    padding: 25px;
+    border: 10px solid blue;
 }
