@@ -32,12 +32,12 @@ ul {
 .done {
 	text-decoration:line-through;
 }
-option.red {
-	background-color: red;
+.red {
+	color: red;
 }
-option.orange {
-	background-color: orange;
+.orange {
+	color: orange;
 }
-option.green {
-	background-color: green;
+.green {
+	color: green;
 }

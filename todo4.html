@@ -12,9 +12,9 @@
 		<input type="text" id="taskbox" size=40 value="Enter task here">
 		
 		<select id="priority" class="priority2">
-			<option class="red">High</option>
-			<option class="orange">Medium</option>
-			<option class="green" >Low</option>
+			<option value="red">High</option>
+			<option value="orange">Medium</option>
+			<option value="green" >Low</option>
 		</select>
 		<button onclick="addTask()">New</button>
 	</aside>
@@ -43,7 +43,7 @@
 		taskList.appendChild(newli);
 		task.value = "";
 		newcb.onclick = doneTask;
-		newli.className = "priority2";	
+		newli.className = priorityValue;	
 		}
 	remember = function() {
 		newList = []
