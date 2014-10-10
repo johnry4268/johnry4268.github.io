@@ -14,7 +14,7 @@
 		<select id="priority">
 			<option class="red">High</option>
 			<option class="orange">Medium</option>
-			<option class="yellow">Low</option>
+			<option class="green">Low</option>
 		</select>
 		<button onclick="addTask()">New</button>
 	</aside>
@@ -38,8 +38,12 @@
 		newcb.id = taskCount;
 		taskList.appendChild(newli);
 		task.value = "";
-		newcb.onclick = doneTask;
+		newcb.onclick = doneTask;	
 		}
+	var select = document.getElementById('#priority');
+	select.onchange = function () {
+    	select.className = this.options[this.selectedIndex].className;
+}
 	</script>
 	</div>
 </body>
