@@ -22,7 +22,11 @@
 	var taskCount = 10;
 	
 	doneTask = function() {
+		if (this.checked)
 		this.parentNode.className = "done"
+		else {
+			this.parentNode.className = ""
+		}
 		}
 	addTask = function() {
 		var newli;
