@@ -27,6 +27,7 @@
 		else {
 			this.parentNode.className = ""
 		}
+		remember();
 		}
 	addTask = function() {
 		var newli;
@@ -43,15 +44,21 @@
 		taskList.appendChild(newli);
 		task.value = "";
 		newcb.onclick = doneTask;
-		newli.className = priorityValue;	
+		newli.className = priorityValue;
+		remember();	
 		}
 	remember = function() {
 		newList = []
-		theList = document.querySelectorAll('li')
+		theList = document.querySelectorAll('#tasklist li')
+		
 		for(i=0; i< theList.length; i++) {
+
 			newList.push(theList[i].innerText)
 		}
+		newList = JSON.stringify(newList);
+		localStorage.setItem("saveTasks", newList)
 	}
+
 	</script>
 	</div>
 </body>
