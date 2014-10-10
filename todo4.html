@@ -41,6 +41,13 @@
 		newcb.onclick = doneTask;
 		newli.className = "priority2";	
 		}
+	remember = function() {
+		newList = []
+		theList = document.querySelectorAll('li')
+		for(i=0; i< theList.length; i++) {
+			newList.push(theList[i].innerText)
+		}
+	}
 	</script>
 	</div>
 </body>
