@@ -12,9 +12,9 @@
 		<input type="text" id="taskbox" size=40 value="Enter task here">
 		
 		<select id="priority" class="Text">
-			<option class="red" value="high">High</option>
-			<option class="orange" value="medium">Medium</option>
-			<option class="green" value="low">Low</option>
+			<option class="red">High</option>
+			<option class="orange">Medium</option>
+			<option class="green" >Low</option>
 		</select>
 		<button onclick="addTask()">New</button>
 	</aside>
@@ -39,7 +39,7 @@
 		taskList.appendChild(newli);
 		task.value = "";
 		newcb.onclick = doneTask;
-		li.className ='priorityValue';	
+		li.className = priority;	
 		}
 	
 	</script>
