@@ -33,11 +33,11 @@ ul {
 	text-decoration:line-through;
 }
 .red {
-	color: red;
+	background-color: red;
 }
 .orange {
-	color: orange;
+	background-color: orange;
 }
-.yellow {
-	color: yellow;
+.green {
+	background-color: green;
 }
