@@ -13,7 +13,7 @@
 		
 		<select id="priority" class="priority2">
 			<option value="red">High</option>
-			<option value="orange">Medium</option>
+			<option value="yellow">Medium</option>
 			<option value="green" >Low</option>
 		</select>
 		<button onclick="addTask()">New</button>
@@ -49,10 +49,8 @@
 		}
 	remember = function() {
 		newList = []
-		theList = document.querySelectorAll('#tasklist li')
-		
+		theList = document.querySelectorAll('#tasklist')
 		for(i=0; i< theList.length; i++) {
-
 			newList.push(theList[i].innerText)
 		}
 		newList = JSON.stringify(newList);
