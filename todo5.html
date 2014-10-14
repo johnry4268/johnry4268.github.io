@@ -1,0 +1,82 @@
+<link rel="stylesheet" href="todo5.css" type="text/css">
+<html>
+	<body>
+	<div id="body">
+		<h2>To Do List</h2>
+	<main>
+		<ul id="tasklist"></ul>
+	</main>
+
+	<aside>
+		<label for="taskbox">Enter Task</label>
+		<input type="text" id="taskbox" size=40 value="Enter task here">
+		
+		<select id="priority" class="priority2">
+			<option value="red">High</option>
+			<option value="yellow">Medium</option>
+			<option value="green" >Low</option>
+		</select>
+		<button onclick="addTask()">New</button>
+	</aside>
+	<script type="text/javascript">
+	var taskCount = 10;
+	
+	doneTask = function() {
+		if (this.checked) {
+		this.parentNode.classList.add("done");
+		} 
+		else {
+			this.parentNode.classList.remove("done");
+		}
+		localSave()
+		}
+		
+	localSave = function() {
+		res = []
+		var i;
+		allEntries = document.querySelectorAll('li')
+		for(i=0; i< allEntries.length; i++) {
+			if (allEntries[i].className != "done" ) {
+				res.push(allEntries[i].innerText);
+			
+			}
+	}
+			console.log(res)
+			localStorage.setItem("todoDatabase",JSON.stringify(res));
+	}
+	
+	restoreTasks = function() {
+		allTasks = JSON.parse(localStorage.getItem('todoDatabase'));
+		task = document.querySelector("#taskbox");
+		tasklist = document.getElementById("tasklist")
+		tasklist.innerHTML = ""
+		for(i = 0; i < allTasks.length; i++) {
+			task.value=allTasks[i]
+			addTask()
+		}
+		}
+	
+	addTask = function() {
+		var newli;
+		task = document.querySelector("#taskbox");
+		taskList = document.querySelector("#tasklist");
+		priorityValue = document.querySelector("#priority").value;
+		newli = document.createElement('li');
+		newcb = document.createElement('input');
+		newcb.type = 'checkbox'
+		newli.appendChild(newcb);
+		t = document.createTextNode(task.value);
+		newli.appendChild(t);
+		newcb.id = taskCount;
+		taskList.appendChild(newli);
+		task.value = "";
+		newcb.onclick = doneTask;
+		newli.className = priorityValue;
+		localSave();	
+		}
+
+		window.onload=restoreTasks
+	</script>
+	</div>
+</body>
+</html>

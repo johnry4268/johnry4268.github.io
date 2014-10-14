@@ -1,0 +1,43 @@
+body {
+	margin:0;
+	padding:0;
+	background-image: url(http://4.bp.blogspot.com/-FoY6bDDf4Gc/UO7cU9N_o7I/AAAAAAAANRA/5bjkzNuqFhg/s1920/beautiful_universe-1080.jpg);
+}
+#body {
+	width:800px; 
+	margin:auto;
+} 
+aside {
+	text-align: center;
+	width: 525px;
+    background-color: orange;
+    padding: 25px;
+    border: 10px solid blue;
+}
+h2 {
+	text-align: center;
+	width: 525px;
+    background-color: orange;
+    padding: 25px;
+    border: 10px solid blue;
+}
+ul {
+	width: 525px;
+    background-color: orange;
+    padding: 25px;
+    border: 10px solid blue;
+    height: 200;
+    list-style-type: none;
+}
+.done {
+	text-decoration:line-through;
+}
+.red {
+	color: red;
+}
+.yellow {
+	color: yellow;
+}
+.green {
+	color: green;
+}
